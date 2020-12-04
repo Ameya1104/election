@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Semantic UI CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    <title> Election Management System </title>
+  </head>
+  <style>
+    body{
+      background-color: whitesmoke;
+    }
+  </style>
+  <body>    
+    <div class="ui secondary pointing menu">
+      <a href="/" class="active item"> Home </a>
+      <div class="ui simple dropdown icon item">Active elections
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a href="/election/1" class="item"> Maharashtra Lok Sabha Elections </a>
+          <a href="/election/2" class="item"> Delhi Lok Sabha Elections </a>
+          <a href="/election/3" class="item"> Andhra Pradesh Lok Sabha Elections </a>
+          <a href="/election/4" class="item"> Gujarat Pradesh Lok Sabha Elections </a>
+      </div>
+      </div>
+      <div class="ui simple dropdown icon item">Closed elections
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a href="/results/loksabha" class="item"> Lok Sabha Elections </a>
+          <a href="/results/vidhansabha" class="item"> Vidhan Sabha Elections </a>
+      </div>
+      </div>
+      <div class="right menu">
+        <a class="ui item"> By Group 1 - Ameya Ranade, Devansh Rathod, Manan Savla</a>
+      </div>
+    </div>
+    {% block content %}
+        
+    {% endblock %}
+        
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="ui container text-center">
+        <h1 style="margin-top: 10px;"> Voter List </h1>
+        <button class="ui small secondary button" style="margin-left: 85%;"><a href="/" style="color: white;"> Go back </a></button>
+    </div>
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%;  padding: 0%;">
+            <thead>
+                <th> Voter ID </th>
+                <th> Voter Name </th>
+                <th> See all details </th>
+                <th> Edit voter details </th>
+                <th> Delete voter </th>
+            </thead>
+            {% for voter in voters %}
+            <tr>
+                <td> {{ voter.v_id }} </td> 
+                <td>{{ voter.name }} </td>
+                <td> <a href="{% url 'indi_voter_detail' voter.pk %}"> Click here to see this voter's details  </a> </td>
+                <td> <a href="{% url 'update_voter' voter.pk %}">  <button class="ui small inverted orange button"> Edit </button></a> </td>
+                <td> <a href="{% url 'delete_voter' voter.pk %}">   <button class="ui small inverted red button"> Delete </button></a> </td>
+            {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <br>
+    
+
+{% endblock %}

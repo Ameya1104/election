@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="ui container text-center">
+        <h1 style="margin-top: 10px;"> {{ voter.name }}'s Details </h1>
+    </div>
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%;  padding: 0%;">
+            <thead>
+                <th> Voter ID </th>
+                <th> Voter Name </th>
+                <th> Aadhar ID </th>
+                <th> Age </th>
+                <th> Date Of Birth </th>
+                <th> Gender </th>
+                <th> Phone Number </th>
+                <th> Email ID </th>
+                <th> City </th>
+                <th> State </th>
+            </thead>
+            <tr>
+                <td> {{ voter.v_id }} </td> 
+                <td>{{ voter.name }} </td>
+                <td>{{ voter.a_id }} </td>
+                <td>{{ voter.age }} </td>
+                <td>{{ voter.dob }} </td>
+                <td>{{ voter.sex }} </td>
+                <td>{{ voter.phone_no }} </td>
+                <td>{{ voter.email }} </td>
+                <td>{{ voter.city }} </td>
+                <td>{{ voter.state }} </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <button class="ui small secondary button" style="margin-left: 85%;"><a href="/voter/details" style="color: white;"> Go back </a></button>
+
+{% endblock %}

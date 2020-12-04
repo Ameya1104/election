@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 style="text-align: center;">Edit voter</h2>
+<button class="ui small secondary button" style="margin-left: 87%;"><a href="/voter/details" style="color: white;"> Go back </a></button>
+    <div class="ui container">
+        <form class="ui form" method="POST" style="width: 100%;">
+            {% csrf_token %}
+            <!-- <div class="row">
+                <div class="col-3">
+                    <div class="field">
+                        <label> Voter ID </label>
+                        {{ form.v_id }}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="field">
+                        <label> Name </label>
+                        {{ form.name }}
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="field">
+                        <label> Aadhar ID </label>
+                        <input type="number" name="a_id" placeholder="Aadhar ID">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="field">
+                        <label> Email ID </label>
+                        <input type="email" name="email" placeholder="Email ID">
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="field">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="field">
+                        <label> Age </label>
+                        <input type="number" name="age" placeholder="Age">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="field">
+                        <label> Sex </label>
+                        <input type="text" name="sex" placeholder="Gender">
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="field">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="field">
+                        <label> Phone Number </label>
+                        <input type="text" name=" phone_no" placeholder="Phone number">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-3">
+                    <div class="field">
+                        <label> Date Of Birth </label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="field">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="field">
+                        <label> City </label>
+                        <input type="text" name="city" placeholder="City">
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="field">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="field">
+                        <label> State </label>
+                        <input type="text" name="state" placeholder="State">
+                    </div>
+                </div>
+            </div> -->
+            {{form.as_p}}
+            <br>
+            <button class="ui secondary button"> Submit </button>
+        </form>
+    </div>
+    <br>
+
+{% endblock %}

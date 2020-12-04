@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="ui container text-center">
+        <h2 style="margin-top: 10px;"> Maharashtra, Vidhan Sabha elections! </h2> 
+    </div>
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%; padding: 0%;">
+        <thead>
+            <th> Candidate ID </th>
+            <th> Candidate Name </th>
+            <th> Date Of Results </th>
+            <th> Constituency </th>
+            <th> Date Of Election </th>
+            <th> Party </th>
+            <th> Votes </th>
+        </thead>
+        {% for result in results %}
+            {% if result.e_id.e_id == 7 %}
+                <tr>
+                    {% if result.vote_count > 2 %}
+                            <td> <strong> {{ result.c_id.c_id }} </strong></td> 
+                            <td> <strong> {{ result.c_id.name }} </strong></td> 
+                            <td> <strong> {{ result.date_of_result }} </strong></td> 
+                            <td> <strong> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }}</strong> </td> 
+                            <td> <strong> {{ result.e_id.date_of_elections }} </strong> </td> 
+                            <td> <strong> {{ result.c_id.p_id.party_name }}</strong> </td> 
+                            <td> <strong> {{ result.vote_count }} </strong> </td>
+                        {% else %}
+                            <td> {{ result.c_id.c_id }} </td>
+                            <td> {{ result.c_id.name }} </td>
+                            <td> {{ result.date_of_result }} </td>
+                            <td> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }} </td>
+                            <td> {{ result.e_id.date_of_elections }} </td>
+                            <td> {{ result.c_id.p_id.party_name }} </td>
+                            <td> {{ result.vote_count }} </td>
+                        {% endif %}
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+    <hr>
+        {% for result in results %}
+            {% if result.e_id.e_id == 7 and result.vote_count > 2 %}
+                <h4> WINNER: {{ result.c_id.name }} </h4>
+            {% endif %}
+        {% endfor %}
+        <hr>
+
+    <div class="ui container text-center">
+        <h2 style="margin-top: 10px;"> Delhi, Vidhan Sabha elections! </h2> 
+    </div>
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%; padding: 0%;">
+            <thead>
+                <th> Candidate ID </th>
+                <th> Candidate Name </th>
+                <th> Date Of Results </th>
+                <th> Constituency </th>
+                <th> Date Of Election </th>
+                <th> Party </th>
+                <th> Votes </th>
+            </thead>
+            {% for result in results %}
+                {% if result.e_id.e_id == 8 %}
+                    <tr>
+                        {% if result.vote_count > 2 %}
+                            <td> <strong> {{ result.c_id.c_id }} </strong></td> 
+                            <td> <strong> {{ result.c_id.name }} </strong></td> 
+                            <td> <strong> {{ result.date_of_result }} </strong></td> 
+                            <td> <strong> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }}</strong> </td> 
+                            <td> <strong> {{ result.e_id.date_of_elections }} </strong> </td> 
+                            <td> <strong> {{ result.c_id.p_id.party_name }}</strong> </td> 
+                            <td> <strong> {{ result.vote_count }} </strong> </td>
+                        {% else %}
+                            <td> {{ result.c_id.c_id }} </td>
+                            <td> {{ result.c_id.name }} </td>
+                            <td> {{ result.date_of_result }} </td>
+                            <td> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }} </td>
+                            <td> {{ result.e_id.date_of_elections }} </td>
+                            <td> {{ result.c_id.p_id.party_name }} </td>
+                            <td> {{ result.vote_count }} </td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+        <hr>
+        {% for result in results %}
+            {% if result.e_id.e_id == 8 and result.vote_count > 2 %}
+                <h4> WINNER: {{ result.c_id.name }} </h4>
+            {% endif %}
+        {% endfor %}
+        <hr>
+    </div>
+
+    <div class="ui container text-center">
+        <h2 style="margin-top: 10px;"> Tamil Nadu, Vidhan Sabha elections! </h2> 
+    </div>
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%; padding: 0%;">
+            <thead>
+                <th> Candidate ID </th>
+                <th> Candidate Name </th>
+                <th> Date Of Results </th>
+                <th> Constituency </th>
+                <th> Date Of Election </th>
+                <th> Party </th>
+                <th> Votes </th>
+            </thead>
+            {% for result in results %}
+                {% if result.e_id.e_id == 9 %}
+                    <tr>
+                        {% if result.vote_count > 2 %}
+                            <td> <strong> {{ result.c_id.c_id }} </strong></td> 
+                            <td> <strong> {{ result.c_id.name }} </strong></td> 
+                            <td> <strong> {{ result.date_of_result }} </strong></td> 
+                            <td> <strong> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }}</strong> </td> 
+                            <td> <strong> {{ result.e_id.date_of_elections }} </strong> </td> 
+                            <td> <strong> {{ result.c_id.p_id.party_name }}</strong> </td> 
+                            <td> <strong> {{ result.vote_count }} </strong> </td>
+                        {% else %}
+                            <td> {{ result.c_id.c_id }} </td>
+                            <td> {{ result.c_id.name }} </td>
+                            <td> {{ result.date_of_result }} </td>
+                            <td> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }} </td>
+                            <td> {{ result.e_id.date_of_elections }} </td>
+                            <td> {{ result.c_id.p_id.party_name }} </td>
+                            <td> {{ result.vote_count }} </td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+        <hr>
+        {% for result in results %}
+            {% if result.e_id.e_id == 9 and result.vote_count > 2 %}
+                <h4> WINNER: {{ result.c_id.name }} </h4>
+            {% endif %}
+        {% endfor %}
+        <hr>
+    </div>
+
+    <div class="ui container text-center">
+        <h2 style="margin-top: 10px;"> Rajasthan, Vidhan Sabha elections! </h2> 
+    </div>
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%; padding: 0%;">
+            <thead>
+                <th> Candidate ID </th>
+                <th> Candidate Name </th>
+                <th> Date Of Results </th>
+                <th> Constituency </th>
+                <th> Date Of Election </th>
+                <th> Party </th>
+                <th> Votes </th>
+            </thead>
+            {% for result in results %}
+                {% if result.e_id.e_id == 10 %}
+                    <tr>
+                        {% if result.vote_count > 2 %}
+                            <td> <strong> {{ result.c_id.c_id }} </strong></td> 
+                            <td> <strong> {{ result.c_id.name }} </strong></td> 
+                            <td> <strong> {{ result.date_of_result }} </strong></td> 
+                            <td> <strong> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }}</strong> </td> 
+                            <td> <strong> {{ result.e_id.date_of_elections }} </strong> </td> 
+                            <td> <strong> {{ result.c_id.p_id.party_name }}</strong> </td> 
+                            <td> <strong> {{ result.vote_count }} </strong> </td>
+                        {% else %}
+                            <td> {{ result.c_id.c_id }} </td>
+                            <td> {{ result.c_id.name }} </td>
+                            <td> {{ result.date_of_result }} </td>
+                            <td> {{ result.c_id.consti_id.ward }}, {{ result.c_id.consti_id.state }} </td>
+                            <td> {{ result.e_id.date_of_elections }} </td>
+                            <td> {{ result.c_id.p_id.party_name }} </td>
+                            <td> {{ result.vote_count }} </td>
+                        {% endif %}
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+        <hr>
+        {% for result in results %}
+            {% if result.e_id.e_id == 10 and result.vote_count > 2 %}
+                <h4> WINNER: {{ result.c_id.name }} </h4>
+            {% endif %}
+        {% endfor %}
+        <hr>
+    </div>
+
+    <br>
+    <button class="ui small secondary button" style="margin-left: 90%;"><a href="/" style="color: white;"> Go back </a></button>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="ui container text-center">
+    <h1 style="margin-top: 15px;"> Election Management System </h1>
+  </div>
+  <br>
+  <div style="margin-top: 15px;" class="ui container text-center">
+    <table style="border-collapse: separate; border-spacing: 1em;  margin-left: 33%;">
+      <tr>
+        <td> <a href="/voter"> Want to enter a new voter? </a></td>
+        <td> <a href="/voter"> <button class="ui small primary labeled icon button"> <i class="user icon"></i> Add Voter </button> </td>
+      </tr>
+      <tr>
+        <td> <a href="/voter/details"> Click here to see voter details </a></p> </td>
+        <td><a href="/voter/details"><button class="ui right labeled icon secondary button"> <i class="right arrow icon"></i> Next </button></a> </td>
+      </tr>
+    </table>
+   
+    <br><br><br>
+    <div class="row">
+      <div class="col-6">
+        <h2 class="text-center"> Active Elections! </h2>
+        <table class="ui celled padded striped table text-center" style="width: 80%; margin-left: 10%; padding: 0%;">
+          <tr>
+            <td > Maharashtra Lok Sabha elections! </td>
+            <td ><button class="ui small secondary button"><a style="color: white;" href="/election/1"> Click here </button></a></td>
+          </tr>
+          <tr>
+            <td> Delhi Lok Sabha elections!   </td>
+            <td><button class="ui small secondary button"><a style="color: white;" href="/election/2"> Click here </button></a></td>
+          </tr>
+          <tr>
+            <td> Andhra Pradesh Lok Sabha elections! </td>
+            <td><button class="ui small secondary button"><a style="color: white;" href="/election/3">Click here</button> </a></td>
+          </tr>
+          <tr>
+            <td> Gujarat Lok Sabha elections! </td>
+            <td><button class="ui small secondary button"><a style="color: white;" href="/election/4">Click here</button> </a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-5">
+        <h2> Voting has closed for these Elections! </h2>
+        <br>
+        <p> <a href="/results/loksabha"> Click here to view closed elections for Lok Sabha ! </a> </p>
+
+        <p> <a href="/results/vidhansabha"> Click here to view closed elections for Vidhan Sabha ! </a> </p>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+
+{% endblock %}

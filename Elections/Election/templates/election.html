@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div style="margin-top: 15px;" class="ui container text-center">
+        <table class="ui celled padded striped table text-center" style="width: 100%; padding: 0%;">
+            {% if request.get_full_path == "/election/1" %}
+                <thead>
+                    <th> Candidate ID </th>
+                    <th> Name </th>
+                    <th> Age </th>
+                    <th> Sex </th>
+                    <th> Martial status </th>
+                    <th> Constituency </th>
+                    <th> Date Of Election </th>
+                    <th> Election </th>
+                    <th> Party </th>
+                </thead>
+                <h3> Maharashtra Lok Sabha elections! </h3>
+                {% for candidate in candidates %}
+                    {% if candidate.e_id.e_id == 1 %}
+                        <tr>
+                            <td> {{ candidate.c_id }} </td>
+                            <td> {{ candidate.name }} </td>
+                            <td> {{ candidate.age }} </td>
+                            <td> {{ candidate.sex }} </td>
+                            <td> {{ candidate.m_status }} </td>
+                            <td> {{ candidate.consti_id.ward }}, {{ candidate.consti_id.state }} </td>
+                            <td> {{ candidate.e_id.date_of_elections }} </td>
+                            <td> {{ candidate.e_id.purpose }} </td>
+                            <td> {{ candidate.p_id.party_name }} </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
+            {% if request.get_full_path == "/election/2" %}
+                <thead>
+                    <th> Candidate ID </th>
+                    <th> Name </th>
+                    <th> Age </th>
+                    <th> Sex </th>
+                    <th> Martial status </th>
+                    <th> Constituency </th>
+                    <th> Date Of Election </th>
+                    <th> Election </th>
+                    <th> Party </th>
+                </thead>
+                <h3> Delhi Lok Sabha elections! </h3>
+                {% for candidate in candidates %}
+                    {% if candidate.e_id.e_id == 2 %}
+                        <tr>
+                            <td> {{ candidate.c_id }} </td>
+                            <td> {{ candidate.name }} </td>
+                            <td> {{ candidate.age }} </td>
+                            <td> {{ candidate.sex }} </td>
+                            <td> {{ candidate.m_status }} </td>
+                            <td> {{ candidate.consti_id.ward }}, {{ candidate.consti_id.state }} </td>
+                            <td> {{ candidate.e_id.date_of_elections }} </td>
+                            <td> {{ candidate.e_id.purpose }} </td>
+                            <td> {{ candidate.p_id.party_name }} </td>
+                            
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            
+            {% if request.get_full_path == "/election/3" %}
+                <thead>
+                    <th> Candidate ID </th>
+                    <th> Name </th>
+                    <th> Age </th>
+                    <th> Sex </th>
+                    <th> Martial status </th>
+                    <th> Constituency </th>
+                    <th> Date Of Election </th>
+                    <th> Election </th>
+                    <th> Party </th>
+                </thead>
+                <h3> Andhra Pradesh Lok Sabha elections! </h3>
+                {% for candidate in candidates %}
+                    {% if candidate.e_id.e_id == 3 %}
+                        <tr>
+                            <td> {{ candidate.c_id }} </td>
+                            <td> {{ candidate.name }} </td>
+                            <td> {{ candidate.age }} </td>
+                            <td> {{ candidate.sex }} </td>
+                            <td> {{ candidate.m_status }} </td>
+                            <td> {{ candidate.consti_id.ward }}, {{ candidate.consti_id.state }} </td>
+                            <td> {{ candidate.e_id.date_of_elections }} </td>
+                            <td> {{ candidate.e_id.purpose }} </td>
+                            <td> {{ candidate.p_id.party_name }} </td>
+                            
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            
+            {% if request.get_full_path == "/election/4" %}     
+                <thead>
+                    <th> Candidate ID </th>
+                    <th> Name </th>
+                    <th> Age </th>
+                    <th> Sex </th>
+                    <th> Martial status </th>
+                    <th> Constituency </th>
+                    <th> Date Of Election </th>
+                    <th> Election </th>
+                    <th> Party </th>
+                </thead>
+                <h3> Gujarat Lok Sabha elections! </h3>
+                {% for candidate in candidates %}
+                    {% if candidate.e_id.e_id == 4 %}
+                        <tr>
+                            <td> {{ candidate.c_id }} </td>
+                            <td> {{ candidate.name }} </td>
+                            <td> {{ candidate.age }} </td>
+                            <td> {{ candidate.sex }} </td>
+                            <td> {{ candidate.m_status }} </td>
+                            <td> {{ candidate.consti_id.ward }}, {{ candidate.consti_id.state }} </td>
+                            <td> {{ candidate.e_id.date_of_elections }} </td>
+                            <td> {{ candidate.e_id.purpose }} </td>
+                            <td> {{ candidate.p_id.party_name }} </td>
+                            
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </table>
+    </div>
+
+    <br>
+    <button class="ui small secondary button" style="margin-left: 86%;"><a href="/" style="color: white;"> Go back </a></button>
+
+{% endblock %}
